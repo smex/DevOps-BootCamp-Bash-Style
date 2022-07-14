@@ -27,7 +27,7 @@ while [ $ch -ne 3 ]; do
                 c=1
                 break
             fi
-            if [ ${r[$(($x)) - 1]} -eq "$n" ]; then
+            if [ "${r[$((x - 1))]}" -eq "$n" ]; then
                 echo "Great"
                 ((p = p + 1))
             else
@@ -40,7 +40,7 @@ while [ $ch -ne 3 ]; do
     else
         break
     fi
-    if [ $c -eq 1 ]; then
+    if [ "$c" -eq 1 ]; then
         echo -e "\nGAME OVER\n"
         echo "You scored $p points"
     fi
